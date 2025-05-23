@@ -1,0 +1,24 @@
+<title/>: "Getting Started with Web3 Development"
+<description/>: "A comprehensive guide to building your first dApp"
+<date/>: "2023-05-23"
+<imageURL/>: "https://cdn.pfps.gg/banners/8817-pepe.gif"
+<author/>: "NonFunCoder"
+<tags/>: "web3,ethereum,solidity,tutorial"
+
+# Getting Started with Web3 Development
+
+Welcome to Web3 development!
+
+<Code/> [javascript]
+// Connect to Ethereum with ethers.js
+import { ethers } from "ethers";
+
+async function connectWallet() {
+  if (window.ethereum) {
+    const accounts = await window.ethereum.request({ 
+      method: "eth_requestAccounts" 
+    });
+    return accounts[0];
+  }
+}
+<Code/>
