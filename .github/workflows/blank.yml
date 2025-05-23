@@ -14,14 +14,13 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - name: Generate Sitemap
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://nonfuncoders.github.io/
+          path-to-root: .
           include-html: true
           include-pdf: false
-          exclude-html-ext: true
-          path-to-root: ./out
+          drop-html-extension: true
+          sitemap-format: xml
